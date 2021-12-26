@@ -19,13 +19,7 @@ def load_music_data(file_name):
 
 
 def values_to_map_index(values):
-    map_index = {}
-    index = 0
-    for val in values:
-        map_index[val] = index
-        index += 1
-
-    return map_index
+    return {val: index for index, val in enumerate(values)}
 
 
 def predict(ratings, similarity, type='user'):
